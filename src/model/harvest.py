@@ -1,7 +1,20 @@
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
+from ..model.base import Base
 
-Base = declarative_base()
+class Harvest(Base):
+    __tablename__ = 'harvest'
 
-class Season(Base):
-    __tablename__ = 'seasons'
+    id = Column(Integer, primary_key=True)
+    product = Column(Integer)
+    jan = Column(String(1))
+    fev = Column(String(1))
+    mar = Column(String(1))
+    abr = Column(String(1))
+    mai = Column(String(1))
+    jun = Column(String(1))
+    jul = Column(String(1))
+    ago = Column(String(1))
+    sep = Column(String(1))
+    out = Column(String(1))
+    nov = Column(String(1))
+    dez = Column(String(1))
