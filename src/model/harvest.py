@@ -1,8 +1,9 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from ..model.base import Base
 
+
 class Harvest(Base):
-    __tablename__ = 'harvest'
+    __tablename__ = "harvest"
 
     id = Column(Integer, primary_key=True)
     product_id = Column(Integer, ForeignKey("products.id"))

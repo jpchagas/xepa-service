@@ -11,6 +11,8 @@ Flask = "^2.2.2"
 SQLAlchemy = "^1.4.40"
 PyMySQL = "^1.0.2"
 pytest = "^7.1.2"
+cryptography = "^37.0.4"
+black = "^22.6.0"
 
 [tool.poetry.dev-dependencies]
 
