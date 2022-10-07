@@ -8,7 +8,7 @@ from ..model.harvest import Harvest
 
 class Database:
     def __init__(self):
-        self.engine = sq.crecreate_engine(os.getenv('DB_URL') + "xepa" , echo=True)
+        self.engine = sq.create_engine(os.getenv('DB_URL') + "xepa" , echo=True)
         Session = sq.orm.sessionmaker()
         Session.configure(bind=self.engine)
         self.session = Session()

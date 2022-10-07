@@ -7,7 +7,7 @@ class Price(Base):
 
     id = Column(Integer, primary_key=True)
     product_id = Column(Integer, ForeignKey("products.id"))
-    data = Column(Date)
+    publish_date = Column(Date)
     unit = Column(String(5))
     maximum = Column(Numeric)
     frequent = Column(Numeric)

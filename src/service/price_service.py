@@ -12,8 +12,8 @@ class PriceService:
     def get_one(self):
         self.price_repository.get_one()
 
-    def add(self):
-        self.price_repository.insert()
+    def add(self, body):
+        self.price_repository.insert(body)
 
     def change(self):
         self.price_repository.update()
