@@ -6,17 +6,17 @@ class ProductService:
     def __init__(self):
         self.product_repository = ProductRepository()
 
-    def list_all(self):
-        self.product_repository.get_all()
+    def get_all(self):
+        return self.product_repository.get_all()
 
-    def get_one(self):
-        self.product_repository.get_one()
+    def get_one(self, description):
+        return self.product_repository.get_one(description)
 
     def add(self, body):
-        self.product_repository.insert(body)
+        return self.product_repository.insert(body['Product'], body['Categoria'])
 
-    def change(self):
+    def update(self):
         self.product_repository.update()
 
-    def remove(self):
-        self.product_repository.delete()
+    def remove(self, description):
+        self.product_repository.delete(description)
