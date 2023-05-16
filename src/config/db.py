@@ -1,6 +1,8 @@
 import sqlalchemy as sq
 import os
 from ..model.base import Base
+from ..model.product_unit import ProductUnit
+from ..model.product_category import ProductCategory
 from ..model.product import Product
 from ..model.price import Price
 from ..model.harvest import Harvest

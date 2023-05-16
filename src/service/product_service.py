@@ -13,7 +13,7 @@ class ProductService:
         return self.product_repository.get_one(description)
 
     def add(self, body):
-        return self.product_repository.insert(body['Product'], body['Categoria'])
+        return self.product_repository.insert(body['description'], body['category'])
 
     def update(self):
         self.product_repository.update()

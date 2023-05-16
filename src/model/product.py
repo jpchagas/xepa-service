@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 from ..model.base import Base
 
 
@@ -7,7 +7,7 @@ class Product(Base):
 
     id = Column(Integer, primary_key=True)
     description = Column(String(50))
-    category = Column(String(15))
+    category = Column(Integer, ForeignKey('products_category.id'))
 
     def to_json(self):
         return {
